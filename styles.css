@@ -1,0 +1,102 @@
+:root {
+  --clr-grey-1: hsl(0, 0%, 21%);
+  --clr-grey-2: hsl(213, 28%, 37%);
+  --clr-grey-3: hsl(0, 0%, 89%);
+  --clr-grey-4: hsl(0, 0%, 97%);
+  --clr-grey-5: hsl(216, 12%, 84%);
+  --clr-orange-1: hsl(20, 100%, 65%);
+  --clr-red-1: hsl(0, 93%, 66%);
+  --clr-red-2: hsl(0, 71%, 52%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-blue-1: hsl(212, 96%, 78%);
+  --clr-blue-2: hsl(213, 94%, 68%);
+  --clr-blue-3: hsl(217, 91%, 60%);
+  --clr-blue-4: hsl(221, 83%, 53%);
+  --clr-blue-5: hsl(224, 76%, 48%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+}
+
+.cal-container {
+  background-color: var(--clr-blue-4);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal {
+  padding: 1rem;
+  box-shadow: var(--light-shadow);
+  min-height: 300px;
+  width: 250px;
+  background-color: var(--clr-white);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.cal-screen {
+  min-height: 70px;
+  padding: 0.5rem;
+  background-color: var(--clr-grey-1);
+  color: var(--clr-white);
+  grid-column: 1 / span 4;
+  width: 98%;
+  margin-bottom: 0.15rem;
+}
+
+.cal-cell {
+  display: block;
+  height: 50px;
+  width: 50px;
+  margin: 0.1rem;
+  cursor: pointer;
+  border: none;
+  color: var(--clr-grey-1);
+  font-weight: 700;
+}
+
+.cal-num {
+  background-color: var(--clr-grey-1);
+  color: var(--clr-white);
+}
+
+.cal-sign {
+  background-color: var(--clr-grey-3);
+}
+
+.cal-clearscreen {
+  background-color: var(--clr-grey-3);
+}
+
+.cal-deletenum {
+  background-color: var(--clr-grey-3);
+}
+
+.cal-clearscreen {
+  width: 96%;
+  grid-column: 1 / span 2;
+}
+
+.cal-equal-sign {
+  background-color: var(--clr-blue-4);
+  color: var(--clr-white);
+}
